@@ -372,33 +372,6 @@ header .btn { padding: 12px 26px; }
 .barcode span { display: block; width: 2px; background: var(--noir); }
 .barcode-txt { font-size: .64rem; letter-spacing: .1em; color: var(--gris); white-space: nowrap; }
 
-/* ============ BANDEAU PARIS ============ */
-.paris { background: var(--noir); color: var(--blanc); position: relative; overflow: hidden; }
-.paris::before {
-  content: 'PARIS'; position: absolute; right: -2%; top: 50%; transform: translateY(-50%);
-  font-size: clamp(140px, 22vw, 320px); font-weight: 700; letter-spacing: .02em;
-  color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, .09);
-  pointer-events: none; user-select: none;
-}
-.paris-in { max-width: 1280px; margin: 0 auto; padding: clamp(70px, 10vh, 120px) clamp(20px, 4vw, 48px); position: relative; }
-.paris .sur-titre { font-size: .7rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--or-clair); }
-.paris h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); margin: 18px 0; max-width: 20ch; }
-.paris p { color: rgba(255, 255, 255, .72); max-width: 58ch; }
-.paris p strong { color: var(--blanc); font-weight: 600; }
-.paris p + p { margin-top: 14px; }
-.paris .grande { font-size: 1.2rem; color: var(--blanc); border-left: 3px solid var(--or); padding-left: 20px; margin-top: 26px; }
-
-.compte-a-rebours { margin-top: 56px; }
-.cpt-label { font-size: .68rem; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: rgba(255,255,255,.5); }
-.cpt-grid { display: flex; align-items: baseline; gap: 18px; margin-top: 16px; }
-.cpt-bloc { display: flex; flex-direction: column; align-items: flex-start; min-width: 64px; }
-.cpt-val { font-family: var(--sans); font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; color: var(--blanc); line-height: 1; font-variant-numeric: tabular-nums; }
-.cpt-unite { font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--or-clair); margin-top: 6px; }
-.cpt-sep { font-size: clamp(2rem, 4vw, 2.8rem); color: rgba(255,255,255,.25); font-weight: 300; align-self: flex-start; margin-top: -4px; }
-.cpt-date { margin-top: 18px; font-size: .8rem; color: rgba(255,255,255,.45); }
-.cpt-date sup { font-size: .7em; }
-@media (max-width: 480px) { .cpt-grid { gap: 10px; } .cpt-bloc { min-width: 52px; } }
-
 /* ============ PROTOCOLE 90 JOURS ============ */
 .protocole-in { max-width: 1280px; margin: 0 auto; padding: clamp(70px, 10vh, 120px) clamp(20px, 4vw, 48px); }
 .protocole h2 { font-size: clamp(1.9rem, 3.8vw, 3.1rem); margin-top: 16px; max-width: 24ch; }
