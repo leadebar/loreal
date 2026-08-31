@@ -494,7 +494,7 @@ footer b { color: var(--blanc); letter-spacing: .18em; text-transform: uppercase
     <div class="stats stats-4">
       <div class="stat stat-hero rv"><b><span class="stat-plus">+</span><span data-compte="37.3" data-suffix="%" data-decimal="1">0</span></b><span>Progression du taux d'ouverture newsletter</span></div>
       <div class="stat rv" style="--d:.12s"><b data-compte="80000" data-format="fr">0</b><span>Contacts CRM pilotés</span></div>
-      <div class="stat rv" style="--d:.24s"><b data-compte="20">0</b><span>Agences de luxe coordonnées</span></div>
+      <div class="stat rv" style="--d:.24s"><b data-compte="16">0</b><span>Agences de luxe coordonnées</span></div>
       <div class="stat rv" style="--d:.36s"><b data-compte="14" data-suffix="+">0</b><span>Portails &amp; passerelles arbitrés</span></div>
     </div>
   </section>
@@ -969,27 +969,6 @@ footer b { color: var(--blanc); letter-spacing: .18em; text-transform: uppercase
     facade.addEventListener('click', lire);
     facade.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); lire(); } });
   });
-
-  /* ---- Compte à rebours vers Paris, janvier 2027 ---- */
-  (function () {
-    const jEl = document.getElementById('cptJours');
-    const hEl = document.getElementById('cptHeures');
-    const mEl = document.getElementById('cptMinutes');
-    if (!jEl) return;
-    const cible = new Date('2027-01-01T00:00:00+01:00').getTime();
-    function tick() {
-      const diff = cible - Date.now();
-      if (diff <= 0) { jEl.textContent = '0'; hEl.textContent = '0'; mEl.textContent = '0'; return; }
-      const jours = Math.floor(diff / 86400000);
-      const heures = Math.floor((diff % 86400000) / 3600000);
-      const minutes = Math.floor((diff % 3600000) / 60000);
-      jEl.textContent = jours;
-      hEl.textContent = heures;
-      mEl.textContent = minutes;
-    }
-    tick();
-    setInterval(tick, 30000);
-  })();
 
   /* ---- Code-barres décoratif de la fiche produit ---- */
   (function () {
